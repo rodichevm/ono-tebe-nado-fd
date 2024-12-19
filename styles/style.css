@@ -25,7 +25,7 @@
   text-decoration: underline;
 }
 
-.header__link_active .header__link {
+.header__link_active {
   text-decoration: none;
 }
 
