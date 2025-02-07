@@ -1,7 +1,7 @@
 .header {
   display: grid;
   align-items: center;
-  padding: 85px 50px 90px 50px;
+  padding: 85px 50px 92px 50px;
   grid-template-columns: 1fr min-content 1fr;
 }
 
@@ -12,40 +12,44 @@
 
 .header__links-list {
   display: flex;
-  list-style-type: circle;
   gap: 32px;
 }
 
-.header__links-list-item_no-bullit {
-  list-style-type: none;
+.header__links-list-item {
+  list-style: circle;
+  font-size: 18px;
+}
+
+.header__links-list-item:first-child {
+  list-style: none;
 }
 
 .header__link {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration: none;
+  border-bottom: 1px solid;
   cursor: pointer;
 }
 
 .header__link_active {
-  text-decoration: none;
+  border-bottom: none;
 }
 
 .header__logo {
   display: block;
-  width: 148px;
-}
-
-.header__logo-image {
-  width: 100%;
+  width: 146px;
 }
 
 .address {
   font-size: 18px;
-  font-weight: 400;
   font-style: normal;
-  line-height: 24px;
+  line-height: 1.35;
   max-width: 240px;
-  text-underline-offset: 3px;
+}
+
+.address a {
+  border-bottom: 1px solid;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .header__address {
@@ -64,7 +68,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 165px 50px 50px 50px;
+  padding: 165px 50px 50px;
   background: url("../images/cover.jpg") no-repeat center/cover;
 }
 
@@ -82,13 +86,13 @@
   text-transform: uppercase;
   color: #fff;
   gap: 21px;
+  margin-bottom: 106px;
 }
 
 .cover__description {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 106px;
 }
 
 .cover__description-text {
@@ -198,13 +202,13 @@
 
 .lots__look-more-link {
   font-size: 20px;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 25px;
-  display: block;
+  display: inline-block;
   margin-top: 30px;
-  padding-left: 40px;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  margin-left: 40px;
+  border-bottom: 1px solid;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -273,13 +277,12 @@
 }
 
 .footer__menu-link {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  border-bottom: 1px solid;
+  text-decoration: none;
 }
 
 .footer__menu-link_active {
-  text-decoration: none;
-  text-underline-offset: 0;
+  border-bottom: none;
 }
 
 .footer__social-list {
@@ -287,6 +290,7 @@
   list-style: none;
   gap: 48px;
   justify-self: end;
+  flex-wrap: wrap;
 }
 
 .footer__social-icon {
