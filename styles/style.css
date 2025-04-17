@@ -297,3 +297,10 @@
   width: 48px;
   height: 48px;
 }
+
+@media (max-width: 1100px) {
+  .header__links-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
